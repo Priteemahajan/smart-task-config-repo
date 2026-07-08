@@ -18,6 +18,8 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
 
+    spring:
+  kafka:
     consumer:
       group-id: employee-group
       auto-offset-reset: earliest
@@ -28,8 +30,7 @@ spring:
         spring:
           json:
             trusted:
-             trusted:
-              packages: com.smart.employeeservice.event,com.smart.taskservice.event
+              packages: "*"
             value:
               default:
                 type: com.smart.employeeservice.event.TaskCreatedEvent
