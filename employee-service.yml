@@ -15,6 +15,7 @@ spring:
       ddl-auto: update
     show-sql: true
 
+
   kafka:
     bootstrap-servers: localhost:9092
 
@@ -29,6 +30,9 @@ spring:
           json:
             trusted:
               packages: "*"
+            use:
+              type:
+                headers: false
             value:
               default:
                 type: com.smart.employeeservice.event.TaskCreatedEvent
